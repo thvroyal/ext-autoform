@@ -3,6 +3,7 @@ const url = (name, id) => `https://docs.google.com/forms/d/e/1FAIpQLSexbLEee1QP-
 const buttonCheckin = document.getElementById('checkin');
 const inputName = document.getElementById('name');
 const inputId = document.getElementById('id');
+const helperSpan = document.getElementById('noti-checked');
 
 const onChangeField = (event) => {
     chrome.storage.sync.set({
@@ -81,7 +82,9 @@ chrome.storage.sync.get('history', ({ history = [] }) => {
     const isCheckedIn = history.includes(today);
     if (isCheckedIn) {
         buttonCheckin.setAttribute('disabled', true);
+        helperSpan.style.display('block');
     } else {
         buttonCheckin.removeAttribute('disabled');
+        helperSpan.style.display('none');
     }
 })

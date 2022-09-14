@@ -10,7 +10,10 @@
     <input type="text" id="name" placeholder="Enter your name" class="form-control mb-2"/>
     <label for="exampleInputEmail1" class="form-label">ID</label>
     <input type="text" id="id" placeholder="Enter your ID" class="form-control mb-2"/>
-    <button id="checkin" class="btn btn-primary">Check in</button>
+    <div class="d-flex flex-column mt-3">
+      <span id="noti-checked">&#9989; You checked in today</span>
+      <button id="checkin" class="btn btn-primary">Check in</button>
+    </div>
     <script src="popup.js"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
